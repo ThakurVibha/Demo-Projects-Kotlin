@@ -8,4 +8,5 @@ import retrofit2.http.GET;
 public interface Retrofitinterface {
     @GET("activity")
     Call<RetrofitModel> getMyActivity();
+
 }
