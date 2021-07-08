@@ -1,0 +1,2 @@
+rootProject.name = "For Loop Task"
+include ':app'

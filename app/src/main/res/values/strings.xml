@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">For Loop Task</string>
+    <string name="restart">Restart</string>
+    <string name="email_error">Enter email</string>
+    <string name="error_invalid_email">Email is invalid</string>
+    <string name="password_error">Password field can not be Empty</string>
+    <string name="error_invalid_password">Password is invalid</string>
+    <string name="show_password">Show</string>
+    <string name="hide_password">Hide</string>
+</resources>

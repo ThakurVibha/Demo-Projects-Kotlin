@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "192830542088",
+    "project_id": "email-password-authentic-9df6f",
+    "storage_bucket": "email-password-authentic-9df6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192830542088:android:fd6e4bcde44fa187b6dcbd",
+        "android_client_info": {
+          "package_name": "com.example.forlooptask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192830542088-oj193a4p02q0am1l1r5j6flh57t45unu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYVhszAPMeOVSrySjUjCEb1meNNlbFQis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192830542088-oj193a4p02q0am1l1r5j6flh57t45unu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
