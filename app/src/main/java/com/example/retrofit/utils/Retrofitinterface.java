@@ -9,4 +9,6 @@ public interface Retrofitinterface {
     @GET("activity")
     Call<RetrofitModel> getMyActivity();
 
+
+
 }
