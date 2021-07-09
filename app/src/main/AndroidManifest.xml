@@ -24,8 +24,8 @@
         <activity android:name="com.example.cheetsheetpractice.CheetSheetActivity" />
         <activity android:name="com.example.filepicker.ImagePickerActivity" />
         <activity android:name="com.example.designing.LoginActivity" />
-        <activity android:name="com.example.designing.RegisterActivity"/>
-            <activity android:name="com.example.retrofit.view.RetrofitActivity">
+        <activity android:name="com.example.designing.RegisterActivity" />
+        <activity android:name="com.example.retrofit.view.RetrofitActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
