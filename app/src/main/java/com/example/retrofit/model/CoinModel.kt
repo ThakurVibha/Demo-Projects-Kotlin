@@ -4,5 +4,9 @@ data class CoinModel(
     val bpi: Bpi,
     val chartName: String,
     val disclaimer: String,
-    val time: Time
-)
+    val time: Time,
+    var symbol:String
+) {
+
+
+}
