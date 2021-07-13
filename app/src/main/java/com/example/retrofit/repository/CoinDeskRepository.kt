@@ -13,70 +13,56 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class CoinDeskRepository(application: Application) {
-    var mSuccessData = MutableLiveData<CoinModel>()
-    var mFailureData = MutableLiveData<String>()
-    var BASE_URL = "https://api.coindesk.com/v1/bpi/"
-    var BASE_URL2 = "https://jsonplaceholder.typicode.com/"
-
-//    fun getApiData() {
-//        var retrofit =
-//            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
-//                .build()
-//        var coinDeskInterface: CoinDeskInterface = retrofit.create(CoinDeskInterface::class.java)
-//        var call: Call<CoinModel> = coinDeskInterface.getMyActivity()
-//        call.enqueue(object : Callback<CoinModel> {
-//            override fun onResponse(call: Call<CoinModel>, response: Response<CoinModel>) {
-//                if (response.isSuccessful) {
-//                    val modal: CoinModel? = response.body()
-//                    mSuccessData.value = modal
-//                }
-//            }
-//            override fun onFailure(call: Call<CoinModel>, t: Throwable) {
-//                mFailureData.value = call.toString()
+//class CoinDeskRepository(application: Application) {
+//    var mSuccessData = MutableLiveData<CoinModel>()
+//    var mFailureData = MutableLiveData<String>()
+//    var BASE_URL = "https://api.coindesk.com/v1/bpi/"
+//    var BASE_URL2 = "https://jsonplaceholder.typicode.com/"
 //
-//            }
-//        })
-//    }
-
-//    fun postApiData() {
+////    fun getApiData() {
+////        var retrofit =
+////            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+////                .build()
+////        var coinDeskInterface: CoinDeskInterface = retrofit.create(CoinDeskInterface::class.java)
+////        var call: Call<CoinModel> = coinDeskInterface.getMyActivity()
+////        call.enqueue(object : Callback<CoinModel> {
+////            override fun onResponse(call: Call<CoinModel>, response: Response<CoinModel>) {
+////                if (response.isSuccessful) {
+////                    val modal: CoinModel? = response.body()
+////                    mSuccessData.value = modal
+////                }
+////            }
+////            override fun onFailure(call: Call<CoinModel>, t: Throwable) {
+////                mFailureData.value = call.toString()
+////
+////            }
+////        })
+////    }
+//
+////    fun postApiData() {
+////        var retrofit =
+////            Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create())
+////                .build()
+////        var coinDeskInterface: CoinDeskInterface = retrofit.create(CoinDeskInterface::class.java)
+////        coinDeskInterface.postData2().enqueue(object : Callback<JsonObject> {
+////            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+////                Log.e("//", "onResponse: " + response.body()!!.get("id"))
+////            }
+////
+////            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
+////                Log.e("//", "onFailure: " + t.message)
+////            }
+////
+////        })
+////    }
+//
+//    fun getSpeicificPost(id: Int) {
 //        var retrofit =
 //            Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create())
+//                .client(MyInterceptor().addInterceptro())
 //                .build()
 //        var coinDeskInterface: CoinDeskInterface = retrofit.create(CoinDeskInterface::class.java)
-//        coinDeskInterface.postData2().enqueue(object : Callback<JsonObject> {
-//            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
-//                Log.e("//", "onResponse: " + response.body()!!.get("id"))
-//            }
-//
-//            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-//                Log.e("//", "onFailure: " + t.message)
-//            }
-//
-//        })
-//    }
-
-    fun getSpeicificPost(id: Int) {
-        var retrofit =
-            Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create())
-                .client(MyInterceptor().addInterceptro())
-                .build()
-        var coinDeskInterface: CoinDeskInterface = retrofit.create(CoinDeskInterface::class.java)
-        coinDeskInterface.getSpecificPost(id).enqueue(object : Callback<JsonObject> {
-            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
-                Log.e("//", "onResponse: " + response.body()!!.asJsonObject.get("userId"))
-            }
-
-            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-                Log.e("//", "onFailure: " + t.message)
-            }
-        })
-    }
-
-//    fun deletePost(id: Int){
-//        var retrofit=Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create()).client(MyInterceptor().addInterceptro()).build()
-//        var coinDeskInterface:CoinDeskInterface=retrofit.create(CoinDeskInterface::class.java)
-//        coinDeskInterface.deletePost(id).enqueue(object :Callback<JsonObject>{
+//        coinDeskInterface.getSpecificPost(id).enqueue(object : Callback<JsonObject> {
 //            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
 //                Log.e("//", "onResponse: " + response.body()!!.asJsonObject.get("userId"))
 //            }
@@ -84,8 +70,22 @@ class CoinDeskRepository(application: Application) {
 //            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
 //                Log.e("//", "onFailure: " + t.message)
 //            }
-//
 //        })
-//
 //    }
-}
+//
+////    fun deletePost(id: Int){
+////        var retrofit=Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create()).client(MyInterceptor().addInterceptro()).build()
+////        var coinDeskInterface:CoinDeskInterface=retrofit.create(CoinDeskInterface::class.java)
+////        coinDeskInterface.deletePost(id).enqueue(object :Callback<JsonObject>{
+////            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+////                Log.e("//", "onResponse: " + response.body()!!.asJsonObject.get("userId"))
+////            }
+////
+////            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
+////                Log.e("//", "onFailure: " + t.message)
+////            }
+////
+////        })
+////
+////    }
+//}

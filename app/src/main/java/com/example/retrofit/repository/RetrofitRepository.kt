@@ -59,7 +59,6 @@ class RetrofitRepository(application: Application) {
                 val memeModel: MemeModel? = response.body()
                 fetchMemesSuccess.value = memeModel
             }
-
             override fun onFailure(call: Call<MemeModel>, t: Throwable) {
                 mDataFailer.value = call.toString()
             }

@@ -13,6 +13,8 @@ import com.example.forlooptask.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_image_picker.*
 import kotlinx.android.synthetic.main.activity_login.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class LoginActivity : AppCompatActivity() {
@@ -116,4 +118,5 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
 }

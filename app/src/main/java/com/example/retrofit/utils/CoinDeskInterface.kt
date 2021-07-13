@@ -14,7 +14,7 @@ import retrofit2.http.Query
 
 interface CoinDeskInterface {
     @GET("currentprice.json")
-    fun getMyActivity(): Call<CoinModel>
+    fun getMyActivity(): Call<List<CoinModel>>
     @POST("name")
     fun postData():Call<CoinModel>
 
