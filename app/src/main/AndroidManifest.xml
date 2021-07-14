@@ -25,7 +25,9 @@
         <activity android:name="com.example.filepicker.ImagePickerActivity" />
         <activity android:name="com.example.designing.LoginActivity" />
         <activity android:name="com.example.designing.RegisterActivity" />
-        <activity android:name="com.example.paging.viewmore.ViewMoreActivity" >
+        <activity android:name="com.example.paging.viewmore.ViewMoreActivity"/>
+            <activity android:name="com.example.retrofitfileuploader.FileUploaderActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

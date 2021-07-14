@@ -73,19 +73,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 //        })
 //    }
 //
-////    fun deletePost(id: Int){
-////        var retrofit=Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create()).client(MyInterceptor().addInterceptro()).build()
-////        var coinDeskInterface:CoinDeskInterface=retrofit.create(CoinDeskInterface::class.java)
-////        coinDeskInterface.deletePost(id).enqueue(object :Callback<JsonObject>{
-////            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
-////                Log.e("//", "onResponse: " + response.body()!!.asJsonObject.get("userId"))
-////            }
-////
-////            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-////                Log.e("//", "onFailure: " + t.message)
-////            }
-////
-////        })
-////
-////    }
-//}
+//    fun deletePost(id: Int){
+//        var retrofit=Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create()).client(MyInterceptor().addInterceptro()).build()
+//        var coinDeskInterface:CoinDeskInterface=retrofit.create(CoinDeskInterface::class.java)
+//        coinDeskInterface.deletePost(id).enqueue(object :Callback<JsonObject>{
+//            override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
+//                Log.e("//", "onResponse: " + response.body()!!.asJsonObject.get("userId"))
+//            }
+//
+//            override fun onFailure(call: Call<JsonObject>, t: Throwable) {
+//                Log.e("//", "onFailure: " + t.message)
+//            }
+//
+//        })
+//
+//    }
+//}}
