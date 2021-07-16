@@ -1,18 +1,6 @@
 package com.example.retrofit.view
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Toast
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.forlooptask.R
-import com.example.retrofit.adapters.CoinDeskAdapter
-import com.example.retrofit.model.CoinModel
 //import com.example.retrofit.viewmodel.CoinDeskViewModel
-import kotlinx.android.synthetic.main.activity_coin_desk.*
-import kotlinx.android.synthetic.main.activity_image_picker.*
-import kotlinx.android.synthetic.main.coin_desk_item.*
 
 //class CoinDeskActivity : AppCompatActivity() {
 //    lateinit var coinDeskViewModel: CoinDeskViewModel

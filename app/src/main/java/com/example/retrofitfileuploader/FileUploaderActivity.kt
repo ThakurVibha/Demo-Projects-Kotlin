@@ -28,7 +28,7 @@ class FileUploaderActivity : AppCompatActivity() {
     val REQUEST_CODEE = 0
     val BASE_URL = "https://api.imgur.com/"
     val AUTH_KEY = "d76a7153e983213940780cbcc6f36621ec29b2aa"
-    val BASE_URL2="https://jsonplaceholder.typicode.com/"
+    val BASE_URL2 = "https://jsonplaceholder.typicode.com/"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_file_uploader)
@@ -37,9 +37,6 @@ class FileUploaderActivity : AppCompatActivity() {
 //        }
         deletePost(id = Int)
     }
-
-
-
 
     private fun old_method_pic_image() {
         val intent = Intent()
@@ -83,7 +80,7 @@ class FileUploaderActivity : AppCompatActivity() {
     fun uploadImage(uri: Uri) {
         var retrofit =
             Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
-                .client(MyInterceptor().addInterceptro(),).build()
+                .client(MyInterceptor().addInterceptro()).build()
 
         var coinDeskInterface: Api = retrofit.create(Api::class.java)
 
@@ -98,6 +95,7 @@ class FileUploaderActivity : AppCompatActivity() {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
                 Log.e("//", "onResponse: ")
             }
+
             override fun onFailure(call: Call<JsonObject>, t: Throwable) {
                 Log.e("//", "onFailure: ")
             }
@@ -105,7 +103,7 @@ class FileUploaderActivity : AppCompatActivity() {
         })
     }
 
-//
+    //
 //    fun uploadImage(view: View) {
 //        var retrofit =
 //            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
@@ -124,11 +122,12 @@ class FileUploaderActivity : AppCompatActivity() {
 //            }
 //        })
 //    }
-
-    fun deletePost(id: Int.Companion){
-        var retrofit=Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create()).client(MyInterceptor().addInterceptro()).build()
-        var coinDeskInterface: CoinDeskInterface =retrofit.create(CoinDeskInterface::class.java)
-        coinDeskInterface.deletePost(id).enqueue(object :Callback<JsonObject>{
+    fun deletePost(id: Int.Companion) {
+        var retrofit =
+            Retrofit.Builder().baseUrl(BASE_URL2).addConverterFactory(GsonConverterFactory.create())
+                .client(MyInterceptor().addInterceptro()).build()
+        var coinDeskInterface: CoinDeskInterface = retrofit.create(CoinDeskInterface::class.java)
+        coinDeskInterface.deletePost(id).enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
                 Log.e("//", "onResponse: " + response.body()!!.asJsonObject.get("userId"))
             }

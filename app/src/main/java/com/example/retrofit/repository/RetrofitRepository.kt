@@ -1,9 +1,6 @@
 package com.example.retrofit.repository
 
 import android.app.Application
-import android.app.ProgressDialog
-import android.view.View
-import android.widget.ProgressBar
 import androidx.lifecycle.MutableLiveData
 import com.example.retrofit.model.MemeModel
 import com.example.retrofit.model.RetrofitModel

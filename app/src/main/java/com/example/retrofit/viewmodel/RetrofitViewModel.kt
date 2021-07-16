@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.retrofit.model.MemeModel
 import com.example.retrofit.model.RetrofitModel
-//import com.example.retrofit.repository.CoinDeskRepository
 import com.example.retrofit.repository.RetrofitRepository
 
 class RetrofitViewModel(application: Application) : AndroidViewModel(application) {
