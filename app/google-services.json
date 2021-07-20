@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "192830542088",
-    "project_id": "email-password-authentic-9df6f",
-    "storage_bucket": "email-password-authentic-9df6f.appspot.com"
+    "project_number": "35441078603",
+    "project_id": "newcloudmessaging-fe432",
+    "storage_bucket": "newcloudmessaging-fe432.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:192830542088:android:fd6e4bcde44fa187b6dcbd",
+        "mobilesdk_app_id": "1:35441078603:android:e255554eb396ed2039b8ce",
         "android_client_info": {
-          "package_name": "com.example.forlooptask"
+          "package_name": "com.example.cloudmessaging"
         }
       },
       "oauth_client": [
         {
-          "client_id": "192830542088-oj193a4p02q0am1l1r5j6flh57t45unu.apps.googleusercontent.com",
+          "client_id": "35441078603-von5vqkmp5bs2ribcb76g286c44sa03f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDYVhszAPMeOVSrySjUjCEb1meNNlbFQis"
+          "current_key": "AIzaSyCoERT3RZUEhy2xKvy1OcavasffHtqRGWw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "192830542088-oj193a4p02q0am1l1r5j6flh57t45unu.apps.googleusercontent.com",
+              "client_id": "35441078603-von5vqkmp5bs2ribcb76g286c44sa03f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

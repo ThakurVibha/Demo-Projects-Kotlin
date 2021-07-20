@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.forlooptask.R
+import com.example.paging.NumberAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 class MyPagingActivity : AppCompatActivity() {
 
@@ -16,18 +17,15 @@ class MyPagingActivity : AppCompatActivity() {
     var page = 0
     var isLoading = false
     val limit = 10
-
     lateinit var adapter: NumberAdapter
     lateinit var layoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
         getPage()
-
 
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -38,29 +36,23 @@ class MyPagingActivity : AppCompatActivity() {
                     val total = adapter.itemCount
 
                     if (!isLoading) {
-
                         if ((visibleItemCount + pastVisibleItem) >= total) {
                             page++
                             getPage()
                         }
-
                     }
 //                }
-
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
-
     }
-
     fun getPage() {
         isLoading = true
         progressBar.visibility = View.VISIBLE
         val start = ((page) * limit) + 1
         val end = (page + 1) * limit
-
         for (i in start..end) {
-            numberList.add("Item " + i.toString())
+            numberList.add( i.toString())
         }
         Handler().postDelayed({
             if (::adapter.isInitialized) {
@@ -72,25 +64,5 @@ class MyPagingActivity : AppCompatActivity() {
             isLoading = false
             progressBar.visibility = View.GONE
         }, 5000)
-
     }
-
-    class NumberAdapter(val activity: MyPagingActivity) : RecyclerView.Adapter<NumberAdapter.NumberViewHolder>() {
-        override fun onCreateViewHolder(p0: ViewGroup, p1: Int): NumberViewHolder {
-            return NumberViewHolder(LayoutInflater.from(activity).inflate(R.layout.rv_child_number, p0, false))
-        }
-
-        override fun getItemCount(): Int {
-            return activity.numberList.size
-        }
-
-        override fun onBindViewHolder(p0: NumberViewHolder, p1: Int) {
-            p0.tvNumber.text = activity.numberList[p1]
-        }
-
-        class NumberViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-            val tvNumber = v.findViewById<TextView>(R.id.tv_number)
-        }
-    }
-
 }

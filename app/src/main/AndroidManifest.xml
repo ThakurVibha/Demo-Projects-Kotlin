@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ForLoopTask">
+        <activity android:name="com.example.cloudmessaging.DashBoard"></activity>
         <activity android:name="com.example.designing.DashBoardActivity" />
         <activity android:name="com.example.designing.ProfileSetupActivity" />
         <activity android:name="com.example.intent.ThirdActivity" />
@@ -27,16 +27,22 @@
         <activity android:name="com.example.designing.LoginActivity" />
         <activity android:name="com.example.designing.RegisterActivity" />
         <activity android:name="com.example.retrofitfileuploader.FileUploaderActivity" />
-        <activity android:name="com.example.retrofitmovies.activities.MoviesActivity"/>
-        <activity android:name="com.example.endlessrecyclerview.MyPagingActivity">
-
-
+        <activity android:name="com.example.retrofitmovies.activities.MoviesActivity" />
+        <activity android:name="com.example.endlessrecyclerview.MyPagingActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+<!--        <service-->
+<!--            android:name="com.example.cloudmessaging.My"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
     </application>
 
 </manifest>
